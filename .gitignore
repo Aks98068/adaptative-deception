@@ -1,0 +1,23 @@
+# Go
+*.exe
+*.test
+
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+.next/
+
+# Env / secrets
+.env
+*.env.local
+
+# ML artifacts
+ml/models/*.joblib
+
+# OS
+.DS_Store
+Thumbs.db
