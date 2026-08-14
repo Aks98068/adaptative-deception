@@ -1,0 +1,23 @@
+version: "3.9"
+
+networks:
+  lab-network:
+    driver: bridge
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: adaptive-deception-db
+    environment:
+      POSTGRES_USER: labuser
+      POSTGRES_PASSWORD: labpassword
+      POSTGRES_DB: deception_lab
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - lab-network
+
+volumes:
+  pgdata:
